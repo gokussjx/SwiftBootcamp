@@ -18,7 +18,7 @@
 		2DA8709F1E6AEE9B00B75CD1 /* MovieReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8709E1E6AEE9B00B75CD1 /* MovieReviewViewController.swift */; };
 		2DA870A21E6AEF9600B75CD1 /* NYTimesMovieReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA870A11E6AEF9600B75CD1 /* NYTimesMovieReviews.swift */; };
 		2DA870A41E6AF00100B75CD1 /* MovieReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA870A31E6AF00100B75CD1 /* MovieReview.swift */; };
-		2DA870A61E6B092D00B75CD1 /* MovieReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA870A51E6B092D00B75CD1 /* MovieReviewTableViewCell.swift */; };
+		6795ADC81E6CA450005607DB /* MovieReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795ADC71E6CA450005607DB /* MovieReviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		2DA8709E1E6AEE9B00B75CD1 /* MovieReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieReviewViewController.swift; sourceTree = "<group>"; };
 		2DA870A11E6AEF9600B75CD1 /* NYTimesMovieReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTimesMovieReviews.swift; sourceTree = "<group>"; };
 		2DA870A31E6AF00100B75CD1 /* MovieReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieReview.swift; sourceTree = "<group>"; };
-		2DA870A51E6B092D00B75CD1 /* MovieReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieReviewTableViewCell.swift; sourceTree = "<group>"; };
+		6795ADC71E6CA450005607DB /* MovieReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieReviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				2DA870721E6AEE2C00B75CD1 /* Movie_Reviews.xcdatamodeld */,
 				2DA8709C1E6AEE8700B75CD1 /* MovieReviewsTableViewController.swift */,
 				2DA8709E1E6AEE9B00B75CD1 /* MovieReviewViewController.swift */,
-				2DA870A51E6B092D00B75CD1 /* MovieReviewTableViewCell.swift */,
+				6795ADC71E6CA450005607DB /* MovieReviewTableViewCell.swift */,
 			);
 			path = "Movie Reviews";
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA870A61E6B092D00B75CD1 /* MovieReviewTableViewCell.swift in Sources */,
+				6795ADC81E6CA450005607DB /* MovieReviewTableViewCell.swift in Sources */,
 				2DA870A41E6AF00100B75CD1 /* MovieReview.swift in Sources */,
 				2DA870A21E6AEF9600B75CD1 /* NYTimesMovieReviews.swift in Sources */,
 				2DA8706C1E6AEE2C00B75CD1 /* AppDelegate.swift in Sources */,
@@ -533,6 +533,7 @@
 				2DA870951E6AEE2C00B75CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DA870961E6AEE2C00B75CD1 /* Build configuration list for PBXNativeTarget "Movie ReviewsTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +542,7 @@
 				2DA870981E6AEE2C00B75CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DA870991E6AEE2C00B75CD1 /* Build configuration list for PBXNativeTarget "Movie ReviewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +551,7 @@
 				2DA8709B1E6AEE2C00B75CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

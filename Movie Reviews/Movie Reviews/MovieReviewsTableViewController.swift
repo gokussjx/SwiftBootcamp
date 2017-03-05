@@ -10,6 +10,9 @@ import UIKit
 
 class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpdating {
 
+    
+    @IBOutlet weak var tableEditButton: UIBarButtonItem!
+    
     var searchController: UISearchController!
     let dateFormatter = DateFormatter()
     
@@ -21,6 +24,8 @@ class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpd
         dateFormatter.dateStyle = .medium
         
         title = "Movie Reviews"
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -75,11 +80,13 @@ class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpd
             if let imageUrl = URL(string: movieReview.media.srcUrlString),
             let imageData = try? Data(contentsOf: imageUrl) {
                 cell.reviewImageView.image = UIImage(data: imageData)
+            } else {
+                cell.reviewImageView.image = UIImage()
             }
-            cell.headlineLabel.text = movieReview.headline
+            cell.titleLabel.text = movieReview.headline
             cell.bylineLabel.text = movieReview.byline
             cell.mpaaRatingLabel.text = movieReview.mpaaRating
-            cell.openingDateLabel.text = "Opens: " + dateFormatter.string(from: movieReview.openingDate)
+            cell.openDateLabel.text = "Opens: " + dateFormatter.string(from: movieReview.openingDate)
         }
 
         return cell
@@ -87,21 +94,27 @@ class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpd
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row % 2 == 0 {
+//        if indexPath.row % 2 == 0 {
             self.performSegue(withIdentifier: "showMovieReviews", sender: self)
-        } else {
-            self.performSegue(withIdentifier: "showPopover", sender: self)
-        }
+//        } else {
+//            self.performSegue(withIdentifier: "showPopover", sender: self)
+//        }
     }
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            movieReviews?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        //  else if editingStyle == .insert {
+    }
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -114,20 +127,23 @@ class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpd
     }
     */
 
-    /*
     // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+//    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+//        
+//    }
 
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        if let movieReview = movieReviews?[sourceIndexPath.row] {
+            movieReviews?.remove(at: sourceIndexPath.row)
+            movieReviews?.insert(movieReview, at: sourceIndexPath.row)
+        }
     }
-    */
-
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
 
     // MARK: - Navigation
 
@@ -144,5 +160,9 @@ class MovieReviewsTableViewController: UITableViewController, UISearchResultsUpd
         searchController.dismiss(animated: true, completion: {})
     }
 
+    @IBAction func editTable(_ sender: Any) {
+        tableEditButton.style = tableView.isEditing ? .done : .plain
+        tableView.isEditing = !tableView.isEditing
+    }
 
 }

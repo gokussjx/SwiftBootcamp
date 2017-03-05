@@ -1,0 +1,85 @@
+{
+	"status": "ok",
+	"categories" : 
+	[
+		{
+			"title" : "International",
+			"articles" : 
+			[
+				{
+					"title" : "Climbers Jump Off of Mount Everest",
+					"pub_date" : "2017-03-01 12:43"
+				},
+				{
+					"title" : "Airplane Flies Around the Earth In 24 hours",
+					"pub_date" : "2017-02-28 17:41"
+				},
+				{
+					"title" : "Giant Volcano Forms Above Arctic Circle",
+					"pub_date" : "2017-02-26 18:23"
+				},
+				{
+					"title" : "First Snake Flies to International Space Station",
+					"pub_date" : "2017-02-24 15:23"
+				},
+				{
+					"title" : "Experts Announce End of World, Again",
+					"pub_date" : "2017-02-14 08:01"
+				}
+			]
+		},
+		{
+			"title" : "National",
+			"articles" : 
+			[
+				{
+					"title" : "A Major New River Forms In the USA",
+					"pub_date" : "2017-02-12 10:05"
+				},
+				{
+					"title" : "Rain Hits California for the 100th Straight Day",
+					"pub_date" : "2017-02-01 09:43"
+				},
+				{
+					"title" : "The Political Cimate is Rainy with Chance of Hail",
+					"pub_date" : "2017-01-21 18:41"
+				},
+				{
+					"title" : "Autonomous Vehicles Take Over Highways",
+					"pub_date" : "2017-01-03 06:13"
+				}			
+			]
+		},
+		{
+			"title" : "Technology",
+			"articles" : 
+			[
+				{
+					"title" : "Apple Announces Siri Live Earbuds",
+					"pub_date" : "2017-02-12 10:05"
+				},
+				{
+					"title" : "Amazon Announces Cloud-based Voice Services",
+					"pub_date" : "2017-02-04 15:02"
+				},
+				{
+					"title" : "First Sentient AI Is Interviewed",
+					"pub_date" : "2017-02-01 15:02"
+				},
+				{
+					"title" : "Internet Addiction Cripples Productivity",
+					"pub_date" : "2017-01-13 15:02"
+				},
+				{
+					"title" : "Brainwave Monitor Bluetooth Interface",
+					"pub_date" : "2017-01-13 15:02"
+				},
+				{
+					"title" : "Shawn Moore Wins Turing Award",
+					"pub_date" : "2017-01-13 15:02"
+				}
+			]
+		}
+	
+	]
+}
